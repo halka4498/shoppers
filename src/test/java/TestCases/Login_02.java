@@ -31,11 +31,6 @@ public class Login_02 {
 		LP.getPasswordTextFeild().sendKeys(Pass);
 		LP.getLoginButton().click();
 		driver.close();
-		
-		
-		
-		
-		
 		Thread.sleep(5000);
 		driver.close();
 		

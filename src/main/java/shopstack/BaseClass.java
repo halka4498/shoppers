@@ -42,7 +42,7 @@ public class BaseClass{
 			}
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-			String URL = dataProperties.dataFromPropertiesFile("C:/eclipse-workspace/shoppersstack/src/test/resources/data.properties","url");
+			String URL = dataProperties.dataFromPropertiesFile("C:/eclipse-workspace/shoppersstack/src/test/resources/data.properties","URL");
 			driver.get(URL);
 	}
 	@BeforeMethod

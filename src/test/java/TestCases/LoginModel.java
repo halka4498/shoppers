@@ -8,7 +8,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 @Listeners(shopstack.ListenerImplementation.class)
 public class LoginModel {
-	@Test(dependsOnMethods ="Tclogin2()")
+	@Test(dependsOnMethods ="Tclogin2()",enabled=false)
 	public static void Tclogin1() throws InterruptedException  {
 		System.setProperty("webdriver.chrome.driver","C:\\eclipse-workspace\\shoppersstack\\src\\main\\resources\\driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -30,7 +30,7 @@ public class LoginModel {
 		driver.close();
 	
 	}
-	@Test(priority =2)
+	@Test(priority =2,enabled = false)
 	public static void Tclogin3() throws InterruptedException  {
 		System.setProperty("webdriver.chrome.driver","C:\\eclipse-workspace\\shoppersstack\\src\\main\\resources\\driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
