@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -17,7 +19,9 @@ public class DataUtilities {
 		FileInputStream fileInput = new FileInputStream(file);
 		Workbook workbook = WorkbookFactory.create(fileInput);
 		Sheet sheet = workbook.getSheet(sheetName);
-		String value = sheet.getRow(rowNumber).getCell(columnNumber).getStringCellValue();
+		Row row = sheet.getRow(rowNumber);
+		Cell cell = row.getCell(columnNumber);
+		String value =cell.getStringCellValue();
 		return value;
 }
 	

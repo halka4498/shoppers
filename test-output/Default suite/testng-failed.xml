@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.LoginModel2">
+      <class name="TestCases.VerifyingWomens">
         <methods>
           <include name="BeforeMethod"/>
-          <include name="Login_001"/>
           <include name="AfterClass"/>
-          <include name="Login_002"/>
+          <include name="Login_006"/>
+          <include name="Women_04"/>
           <include name="AfterMethod"/>
           <include name="BeforeClass"/>
         </methods>
-      </class> <!-- TestCases.LoginModel2 -->
+      </class> <!-- TestCases.VerifyingWomens -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

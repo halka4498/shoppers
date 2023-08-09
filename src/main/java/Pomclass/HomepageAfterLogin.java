@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomepageAfterLogin {
+	
 	public WebDriver driver;
 	
 	public HomepageAfterLogin(WebDriver driver) {
@@ -23,7 +24,7 @@ public class HomepageAfterLogin {
 	@FindBy(id="women")
 	private WebElement WomenMenuLink;
 	
-	@FindBy(xpath="//*[@id=\"cartIcon\"]")
+	@FindBy(xpath="//*[name()='svg' and @id='cartIcon']")
 	private WebElement MainCartIcon;
 	
 	public WebElement getMainCartIcon() {

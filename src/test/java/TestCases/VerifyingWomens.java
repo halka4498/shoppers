@@ -9,6 +9,7 @@ import Pomclass.AddCartPage;
 import Pomclass.HomepageAfterLogin;
 import Pomclass.womens;
 import shopstack.BaseClass;
+
 @Listeners(shopstack.ListenerImplementation.class)
 public class VerifyingWomens extends BaseClass{
 	@Test
@@ -16,7 +17,7 @@ public class VerifyingWomens extends BaseClass{
 		HomepageAfterLogin HPAL = new HomepageAfterLogin(driver);
 		HPAL.getWomenMenuLink().click();
 		
-		womens womensPom = new womens(driver);
+		womens womensPom = new womens (driver);
 		womensPom.getaddToCartWomenButton().click();
 		HPAL.getMainCartIcon().click();
 	
@@ -31,5 +32,16 @@ public class VerifyingWomens extends BaseClass{
 		}
 	
 	assertEquals(actualResult, "Fabric : Rayon");
+	
+	}
+	@Test
+	public void Women_04() throws Throwable {
+		HomepageAfterLogin HPAL = new HomepageAfterLogin(driver);
+		HPAL.getWomenMenuLink().click();
+		
+		Thread.sleep(2000);
+		womens womensPom = new womens(driver);
+		womensPom.getaddToCartWomenButton().click();
+		System.out.println("done");
 	}
 }

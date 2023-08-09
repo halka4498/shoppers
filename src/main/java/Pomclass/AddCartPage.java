@@ -11,7 +11,7 @@ public class AddCartPage{
 			PageFactory.initElements(driver, this);
 		}
 	
-		@FindBy(xpath="//h3[text()='indianclothings']..//p[2]")
+		@FindBy(xpath="//h3[text()='indianclothings']")
 		private WebElement rayonSleeveLength;
 		public WebElement getrayonSleeveLength() {
 			return rayonSleeveLength;
